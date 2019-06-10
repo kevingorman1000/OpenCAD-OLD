@@ -11,6 +11,18 @@
   **/
 
 /**#@+
+ * Setting Information
+ *
+ * There are three (3) main settings that are required to be changed before using OpenCAD.
+ *
+ * Community Name
+ * Database Information
+ * Base URL
+ *
+ * @since 1.0a RC1
+ **/
+
+/**#@+
  * Community Name
  *
  * This is where you will change the community name to suit your Community.
