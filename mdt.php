@@ -91,7 +91,7 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                     }
                     elseif((isset($_GET['dep']) && 'roadsideAssist' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'roadsideAssist' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/gta5.png" width="48" height="48" alt="roadsideAssist"> <span><?php echo $activeDepartment; ?></span></a>';
-                    }?>  </div>
+                    }else{echo '<a href="javascript:void(0)" class="site_title"> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Sad_face.svg" width="48" height="48" alt="No Department found"> <span><?php echo $activeDepartment; ?></span></a>';}?>  </div>
                   <div class="clearfix"></div>
                   <!-- menu profile quick info -->
                   <div class="profile clearfix">
