@@ -69,28 +69,38 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                <div class="left_col scroll-view">
                   <div class="navbar nav_title" style="border: 0;">
                     <!-- Added 10/06/19: Added the ability to have a custom image at the top of the left side menu -->
+                    <!-- Added 10/06/19: Added LEO checking for sidebar menus -->
                     <?php
                     unset($_SESSION['activeDepartment']);
                     if((isset($_GET['dep']) && 'state' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'state' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/state.png" width="48" height="48" alt="state"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'true';
                     }
                     elseif((isset($_GET['dep']) && 'sheriff' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'sheriff' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/sheriff.png" width="48" height="48" alt="sheriff"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'true';
+
                     }
                     elseif((isset($_GET['dep']) && 'highway' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'highway' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/highway.png" width="48" height="48" alt="highway"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'true';
+
                     }
                     elseif((isset($_GET['dep']) && 'police' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'police' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/lspd.png" width="48" height="48" alt="police"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'true';
                     }
                     elseif((isset($_GET['dep']) && 'fire' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'fire' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/lsfd.png" width="48" height="48" alt="fire"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'false';
                     }
                     elseif((isset($_GET['dep']) && 'ems' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'ems' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/ems.png" width="48" height="48" alt="ems"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'false';
                     }
                     elseif((isset($_GET['dep']) && 'roadsideAssist' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'roadsideAssist' == $_SESSION['activeDepartment'])){
                       echo '<a href="javascript:void(0)" class="site_title"> <img src="/cad/images/departmentIcons/gta5.png" width="48" height="48" alt="roadsideAssist"> <span><?php echo $activeDepartment; ?></span></a>';
+                      $_SESSION['isLeo'] = 'false';
                     }else{echo '<a href="javascript:void(0)" class="site_title"> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Sad_face.svg" width="48" height="48" alt="No Department found"> <span><?php echo $activeDepartment; ?></span></a>';}?>  </div>
                   <div class="clearfix"></div>
                   <!-- menu profile quick info -->
@@ -107,7 +117,10 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                   <!-- /menu profile quick info -->
                   <br />
                   <!-- sidebar menu -->
-                  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                  <!-- Added 10/06/19: Removed warnings/citations/warrants from Fire and EMS -->
+                  <?php
+                  if($_SESSION['isLeo'] == 'true'){
+                    echo '<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                      <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
@@ -152,7 +165,46 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                      </div>
                      <!-- ./ menu_section -->
                   </div>
+                  <!-- /sidebar menu -->';
+                }else{
+                  echo '<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                     <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                           <li class="active">
+                              <a><i class="fas fa-home"></i> Home</span></a>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- ./ menu_section -->
+                  </div>
                   <!-- /sidebar menu -->
+                  <div id="firstResponder" class="dynamic-content main_menu_side hidden-print main_menu">
+                     <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                           <li class="active">
+                              <a><i class="fas fa-home"></i> Home <span class="fas fa-chevron-down"></span></a>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- ./ menu_section -->
+                  </div>
+                  <!-- /sidebar menu -->
+                  <div id="roadsideAssist" class="dynamic-content main_menu_side hidden-print main_menu">
+                     <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                           <li class="active">
+                              <a><i class="fas fa-home"></i> Home <span class="fas fa-chevron-down"></span></a>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- ./ menu_section -->
+                  </div>
+                  <!-- /sidebar menu -->';
+                }
+                  ?>
                   <!-- /menu footer buttons -->
                   <div class="sidebar-footer hidden-small" style="background:#172d44">
                      <!--  —— Left in for user settings. To be introduced later. Probably after RC1. ——
@@ -378,7 +430,7 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                             ';
                         }
                         else
-                        {
+                        { // Not used currently.
                           /*
                          echo '
                          <div class="col-md-6 col-sm-6 col-xs-6">
@@ -524,40 +576,6 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                <!-- ./ col-md-4 col-sm-4 col-xs-4 -->
             </div>
             <!-- ./ row -->
-         
-         <?php
-
-          if ( FIRE_NCIC_PLATE === true xor EMS_NCIC_PLATE === true xor ROADSIDE_NCIC_PLATE === true ) { ?>
-                 <div id="ncic" class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-4">
-                       <div class="x_panel">
-                          <div class="x_title">
-                             <h2>NCIC Plate Lookup</h2>
-                             <ul class="nav navbar-right panel_toolbox">
-                                <li><a class="collapse-link"><i class="fas fa-chevron-up"></i></a></li>
-                             </ul>
-                             <div class="clearfix"></div>
-                          </div>
-                          <!-- ./ x_title -->
-                          <div class="x_content">
-                             <div class="input-group">
-                                <input type="text" name="ncic_plate" class="form-control" id="ncic_plate" placeholder="License Plate, (ABC123)"/>
-                                <span class="input-group-btn">
-                                <button type="button" class="btn btn-primary" id="ncic_plate_btn">Send</button>
-                                </span>
-                             </div>
-                             <!-- ./ input-group -->
-                             <div name="ncic_plate_return" id="ncic_plate_return" contenteditable="false" style="background-color: #eee; opacity: 1; font-family: 'Courier New'; font-size: 15px; font-weight: bold;">
-                             </div>
-                             <!-- ./ ncic_plate_return -->
-                          </div>
-                          <!-- ./ x_content -->
-                       </div>
-                       <!-- ./ x_panel -->
-                    </div>
-                    <!-- ./ col-md-4 col-sm-4 col-xs-4 -->
-                  <?php } else {} ?>
-           </div>
       <!-- "" -->
     </div>
   </div>
@@ -921,7 +939,7 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                     elseif((isset($_GET['dep']) && 'roadsideAssist' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'roadsideAssist' == $_SESSION['activeDepartment'])){
                       $_SESSION['previous_location'] = 'mdtRoad';
                    }
-                 /*$_SESSION['previous_location'] = 'mdt';*/?>
+                   ?>
                 <input name="create_citation" type="submit" class="btn btn-primary" value="Create" />
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </form>
