@@ -32,6 +32,6 @@ This version of OpenCAD is based on the original source from [Shane Gill](https:
 # Changing Department Icons
 In this version (0.0.1 released 10/06/19) you are now able to change the department icons. Within the folder /images/departmentIcons/ you can upload your own images. You are then able to change the file names in your "mdt.php" file. Lines: 75,78,81,84,87,83
 
-## Disclaimer
+#### Disclaimer
 
 I am not the original dev of this CAD. You can find that information above. I have just taken the files, worked on them and resolved some issues. I am NOT a PHP developer so my code may not be pretty but it's functional, I'll modify and pretty up the code when I can.
