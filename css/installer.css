@@ -1,0 +1,47 @@
+.installer-Form{
+    margin: 20px auto;
+    width: 344px;
+}
+
+input{
+    padding:10px;
+    font-size: inherit;
+}
+
+input[type="text"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+    background: #FAF6D9;
+}
+
+input[type="submit"]{
+    width: 344px;
+    height: 45px;
+    border: none;
+    background: steelblue;
+    color: white;
+}
+
+input:focus{
+    background: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    margin: 1px;
+    padding: 1px;
+}
+body {
+    color: #73879C;
+    background: #2A3F54;
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.471
+}

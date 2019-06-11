@@ -1,42 +1,4 @@
-.installer-Form{
-    margin: 20px auto;
-    width: 344px;
-}
 
-input{
-    padding:10px;
-    font-size: inherit;
-}
-
-input[type="text"]{
-    display: block;
-    margin-bottom: 25px;
-    width: 100%;
-    border: 2px solid steelblue;
-    background: #FAF6D9;
-}
-
-input[type="submit"]{
-    width: 344px;
-    height: 45px;
-    border: none;
-    background: steelblue;
-    color: white;
-}
-
-input:focus{
-    background: white;
-}
-
-h1{
-    text-align: center;
-    font-size: 50px;
-}
-
-h2{
-    margin: 1px;
-    padding: 1px;
-}
 .dynamic-content {
 		display:none;
 }
