@@ -25,7 +25,7 @@ Need Help? [View our Confluence](https://guides.opencad.io/alldoc) which has all
 
 Still Having Trouble? on the community Discord post your issue in [#support-triadge](https://discord.gg/ufBBmaN) In addition to the Discord support channel we urge you to [register an account on our JIRA](https://jira.opencad.io/secure/Signup!default.jspa) and [submit any issues you have there so they may be tracked](https://help.opencad.io/). If you encounter problems with registering in JIRA please let someone in [#general](https://discord.gg/ufBBmaN) know.
 
-## Licens
+## License
 
 Do you suspect someone of violating the license of OpenCAD or plagiarizing code? Please [send these reports to our security desk](https://security.opencad.io/).
 
