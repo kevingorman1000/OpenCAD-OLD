@@ -17,7 +17,7 @@ Open Source Computer Aided Dispatch System for GTA V Roleplay Communities.
 * The OpenCAD Development team **DOES NOT** recommend the utilization of "free" webhosting solutions due to a multitude of reasons. Our team has compiled a *[list of Recommended Hosting Providers](https://guides.opencad.io/alldoc/installation-guides/recommended-hosting-providers)*.
 
 # Installation Instructions
-Please visit the Wiki [here]https://github.com/kevingorman1000/OpenCAD/wiki/Installation
+Please visit the Wiki *[here](https://github.com/kevingorman1000/OpenCAD/wiki/Installation)*
 
 ## Support
 
