@@ -1308,7 +1308,7 @@ INSERT INTO `vehicles` (`id`, `Make`, `Model`) VALUES
   (139, 'Declasse', 'Tornado Custom'),
   (140, 'Declasse', 'Tornado Rat Rod'),
   (454, 'Declasse', 'Tulip'),
-  (457, 'Declasse', 'Vamos'),
+  (458, 'Declasse', 'Vamos'),
   (141, 'Declasse', 'Vigero'),
   (142, 'Declasse', 'Voodoo'),
   (143, 'Declasse', 'Voodoo Custom'),
