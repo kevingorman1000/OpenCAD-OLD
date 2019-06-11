@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title>OpenCAD Installer</title>
-	<link rel="stylesheet" href="../css/custom.css">
+	<link rel="stylesheet" href="../css/installer.css">
 </head>
 <body>
 	<?php 
