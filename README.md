@@ -19,6 +19,9 @@ Open Source Computer Aided Dispatch System for GTA V Roleplay Communities.
 # Installation Instructions
 Please visit the Wiki *[here](https://github.com/kevingorman1000/OpenCAD/wiki/Installation)*
 
+# FAQ
+Please visit the FAQ before reporting any issues. You can get it *[here](https://github.com/kevingorman1000/OpenCAD/wiki/FAQ)*
+
 ## Support
 
 Need Help? [View our Confluence](https://guides.opencad.io/alldoc) which has all the documentation you need.
