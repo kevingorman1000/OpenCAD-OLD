@@ -16,21 +16,8 @@ Open Source Computer Aided Dispatch System for GTA V Roleplay Communities.
 * This has been tested to work on Linux, Windows and cPanel.
 * The OpenCAD Development team **DOES NOT** recommend the utilization of "free" webhosting solutions due to a multitude of reasons. Our team has compiled a *[list of Recommended Hosting Providers](https://guides.opencad.io/alldoc/installation-guides/recommended-hosting-providers)*.
 
-# Auto Installer
-As of version 0.0.2 (released 11/06/19), we have implemented a very bastic auto installer. Please follow these instructions on how to install:
-  1. Copy all OpenCad files over to your webhost.
-  2. Create a Database calling it whatever you want. 
-  3. Navigate to: example.com/CadDirectory/install
-  4. Enter Database login details and click submit.
-  5. Enter Configuration details and click submit.
-  6. Navigate back to to main Cad directory.
-  7. Should now see the login page. Login with the following details:
-    Username: admin@test.com
-    Password: cad2017!
-  8. If you can login please make sure that you delete the "Install" folder within your website directory!
-
-# Changing Department Icons
-In this version (0.0.1 released 10/06/19) you are now able to change the department icons. Within the folder /images/departmentIcons/ you can upload your own images. You are then able to change the file names in your "mdt.php" file. Lines: 75,78,81,84,87,83
+# Installation Instructions
+Please visit the Wiki [here]https://github.com/kevingorman1000/OpenCAD/wiki/Installation
 
 ## Support
 
