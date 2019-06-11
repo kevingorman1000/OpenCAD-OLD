@@ -136,7 +136,6 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                            <li>
                                  <a type="button" data-toggle="modal" data-target="#createArrest" ><i class="fas fa-ban"></i> Create Arrest Report</a>
                            </li>
-
                         </ul>
                      </div>
                      <!-- ./ menu_section -->
@@ -178,6 +177,7 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                      </div>
                      <!-- ./ menu_section -->
                   </div>
+<<<<<<< HEAD
                   <!-- /sidebar menu -->
                   <div id="firstResponder" class="dynamic-content main_menu_side hidden-print main_menu">
                      <div class="menu_section">
@@ -191,6 +191,21 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
                      <!-- ./ menu_section -->
                   </div>
                   <!-- /sidebar menu -->
+=======
+                  <!-- /sidebar menu -->
+                  <div id="firstResponder" class="dynamic-content main_menu_side hidden-print main_menu">
+                     <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                           <li class="active">
+                              <a><i class="fas fa-home"></i> Home <span class="fas fa-chevron-down"></span></a>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- ./ menu_section -->
+                  </div>
+                  <!-- /sidebar menu -->
+>>>>>>> 2b3a83a49ae1296fa85be9156025da76ff2db4c3
                   <div id="roadsideAssist" class="dynamic-content main_menu_side hidden-print main_menu">
                      <div class="menu_section">
                         <h3>General</h3>
@@ -1024,6 +1039,170 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
       <!-- ./ modal-dialog modal-lg -->
     </div>
     <!-- ./ modal fade bs-example-modal-lg -->
+    <!-- ./ modal fade bs-example-modal-lg -->
+      <!-- Call Details Modal -->
+      <div class="modal fade" id="callDetails" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" id="closecallDetails"><span aria-hidden="true">×</span>
+               </button>
+               <h4 class="modal-title" id="myModalLabel">Call Details</h4>
+            </div>
+            <!-- ./ modal-header -->
+            <div class="modal-body">
+               <form class="callDetailsForm" id="callDetailsForm">
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Incident ID</label>
+                     <div class="col-lg-10">
+                        <input type="text" id="call_id_det" name="call_id_det" class="form-control" disabled>
+                     </div>
+                     <!-- ./ col-sm-9 -->
+                  </div>
+                  <br/>
+                  <!-- ./ form-group -->
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Incident Type</label>
+                     <div class="col-lg-10">
+                        <input type="text" id="call_type_det" name="call_type_det" class="form-control" disabled>
+                     </div>
+                     <!-- ./ col-sm-9 -->
+                  </div>
+                  <br/>
+                  <!-- ./ form-group -->
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Main Street</label>
+                     <div class="col-lg-10">
+                        <input type="text" id="call_street2_det" name="call_street1_det" class="form-control" disabled>
+                     </div>
+                     <!-- ./ col-sm-9 -->
+                  </div>
+                  <br/>
+                  <!-- ./ form-group -->
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Cross Street</label>
+                     <div class="col-lg-10">
+                        <input type="text" id="call_street3_det" name="call_street2_det" class="form-control" disabled>
+                     </div>
+                     <!-- ./ col-sm-9 -->
+                  </div>
+                  <br/>
+                  <!-- ./ form-group -->
+                  <div class="form-group">
+                     <label class="col-lg-2 control-label">Additional Location Info</label>
+                     <div class="col-lg-10">
+                        <input type="text" id="call_street3_det" name="call_street3_det" class="form-control" disabled>
+                     </div>
+                     <!-- ./ col-sm-9 -->
+                  </div>
+                     <br/>
+                  <div class="clearfix">
+                     <br/><br/><br/><br/>
+                     <!-- ./ form-group -->
+                     <div class="form-group">
+                        <label class="col-lg-2 control-label">Narrative</label>
+                        <div class="col-lg-10">
+                           <div name="call_narrative" id="call_narrative" contenteditable="false" style="background-color: #eee; opacity: 1; border: 1px solid #ccc; padding: 6px 12px; font-size: 14px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal;"></div>
+                        </div>
+                        <!-- ./ col-sm-9 -->
+                     </div>
+                     <br/>
+                     <br/><br/><br/><br/>
+                     <!-- ./ form-group -->
+                     <div class="form-group">
+                        <label class="col-lg-2 control-label">Add Narrative</label>
+                        <div class="col-lg-10">
+                           <textarea name="narrative_add" id="narrative_add" class="form-control" style="text-transform:uppercase" rows="2" required></textarea>
+                        </div>
+                        <!-- ./ col-sm-9 -->
+                     </div>
+                     <br/>
+                  <!-- ./ modal-body -->
+                  <br/>
+                  <div class="modal-footer">
+                     <input type="submit" id="addCallNarrative" class="btn btn-primary pull-left" value="Add Narrative" />
+                     <button id="closeDetailsModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                  <!-- ./ modal-footer -->
+               </form>
+            </div>
+            <!-- ./ modal-content -->
+         </div>
+         <!-- ./ modal-dialog modal-lg -->
+      </div>
+      <!-- ./ modal fade bs-example-modal-lg -->
+      <div class="modal fade" id="rms" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" id="closeNewCall"><span aria-hidden="true">×</span>
+                  </button>
+            <h4 class="modal-title" id="myModalLabel">Warning Creator</h4>
+          </div>
+          <!-- ./ modal-header -->
+          <div class="modal-body">
+            <form role="form" action="<?php echo BASE_URL; ?>/actions/responderActions.php" method="post">
+                <div class="form-group row">
+                <label class="col-lg-2 control-label">Civilian Name</label>
+                <div class="col-lg-10">
+                  <select class="form-control selectpicker" name="civilian_names" id="civilian_names" data-live-search="true" required title="Select Civilian">
+                    <?php getCivilianNamesOption();?>
+                  </select>
+                </div>
+                <!-- ./ col-sm-9 -->
+              </div>
+              <!-- ./ form-group -->
+              <div class="form-group row">
+                <label class="col-lg-2 control-label">Warning Name 1</label>
+                <div class="col-lg-10">
+          <input type="text" class="form-control" name="warning_name_1" id="warning_name_1" placeholder="Enter a warning" required />
+                </div>
+                <!-- ./ col-sm-9 -->
+              </div>
+        <p>Optional</p>
+              <div class="form-group row">
+                <label class="col-lg-2 control-label">Warning Name 2</label>
+                <div class="col-lg-10">
+          <input type="text" class="form-control" name="warning_name_2" id="warning_name_2" placeholder="Enter a warning"  />
+                </div>
+                <!-- ./ col-sm-9 -->
+              </div>
+              <div class="form-group row">
+                <label class="col-lg-2 control-label">Warning Name 3</label>
+                <div class="col-lg-10">
+          <input type="text" class="form-control" name="warning_name_3" id="warning_name_3" placeholder="Enter a warning"  />
+                </div>
+                <!-- ./ col-sm-9 -->
+              </div>
+              <div class="form-group row">
+                <label class="col-lg-2 control-label">Warning Name 4</label>
+                <div class="col-lg-10">
+          <input type="text" class="form-control" name="warning_name_4" id="warning_name_4" placeholder="Enter a warning"  />
+                </div>
+                <!-- ./ col-sm-9 -->
+              </div>
+              <div class="form-group row">
+                <label class="col-lg-2 control-label">Warning Name 5</label>
+                <div class="col-lg-10">
+          <input type="text" class="form-control" name="warning_name_5" id="warning_name_5" placeholder="Enter a warning"  />
+                </div>
+                <!-- ./ col-sm-9 -->
+              </div>
+              <!-- ./ form-group -->
+          </div>
+          <!-- ./ modal-body -->
+          <div class="modal-footer">
+                <input name="create_warning" type="submit" class="btn btn-primary" value="Create" />
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </form>
+          </div>
+          <!-- ./ modal-footer -->
+        </div>
+        <!-- ./ modal-content -->
+      </div>
+      <!-- ./ modal-dialog modal-lg -->
+    </div>
+    <!-- ./ modal fade bs-example-modal-lg -->
       <!-- Call Details Modal -->
       <div class="modal fade" id="callDetails" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -1198,7 +1377,7 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
       </script>
       <?php
 
-           if((isset($_GET['dep']) && 'Fire' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'Fire' == $_SESSION['activeDepartment']))
+           if((isset($_GET['dep']) && 'fire' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'fire' == $_SESSION['activeDepartment']))
 
            {
              echo '<audio id="newCallAudio" src="'.BASE_URL.'/sounds/Fire_Tones_Aligned.wav" preload="auto"></audio>';
@@ -1283,7 +1462,8 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
              getMyCall();
              mdtGetVehicleBOLOS();
              mdtGetPersonBOLOS();
-			 getAOP();
+             getAOP();
+             getCallHistoryDetails();
 
              $('#enroute_btn').click(function(evt) {
                console.log(evt);
