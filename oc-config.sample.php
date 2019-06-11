@@ -61,6 +61,9 @@ define('DB_HOST', 'localhost');
  *             //subdomain.example.com/subdir - subdomain with subdirectory
  *             //example.com/subdir - root domain with subdirectory
  *
+ *	       Do NOT include your https:// or http:// or www. Please only include the main website URL like above.
+ *             Putting it bluntly, it will break OpenCad and you will be missing styling!
+ *
  *             The OpenCAD team does not recommend including the trailing / on any of the above examples.
  *             It won't necessarily break anything but just makes reference look strange having
  *             two slashed when it isn't needed.
