@@ -20,14 +20,27 @@ Open Source Computer Aided Dispatch System for GTA V Roleplay Communities.
 
 Need Help? [View our Confluence](https://guides.opencad.io/alldoc) which has all the documentation you need.
 
-Still Having Trouble? on the community Discord post your issue in [#peer-support](https://discord.gg/ufBBmaN) In addition to the Discord support channel we urge you to [register an account on our JIRA](https://jira.opencad.io/secure/Signup!default.jspa) and [submit any issues you have there so they may be tracked](https://help.opencad.io/). If you encounter problems with registering in JIRA please let someone in [#general](https://discord.gg/ufBBmaN) know.
+Still Having Trouble? on the community Discord post your issue in [#support-triadge](https://discord.gg/ufBBmaN) In addition to the Discord support channel we urge you to [register an account on our JIRA](https://jira.opencad.io/secure/Signup!default.jspa) and [submit any issues you have there so they may be tracked](https://help.opencad.io/). If you encounter problems with registering in JIRA please let someone in [#general](https://discord.gg/ufBBmaN) know.
 
-## License
+## Licens
 
 Do you suspect someone of violating the license of OpenCAD or plagiarizing code? Please [send these reports to our security desk](https://security.opencad.io/).
 
 # Disclosure of Fork
 This version of OpenCAD is based on the original source from [Shane Gill](https://github.com/ossified/openCad).
+
+# Auto Installer
+As of version 0.0.2 (released 11/06/19), we have implemented a very bastic auto installer. Please follow these instructions on how to install:
+  1. Copy all OpenCad files over to your webhost.
+  2. Create a Database calling it whatever you want. 
+  3. Navigate to: example.com/CadDirectory/install
+  4. Enter Database login details and click submit.
+  5. Enter Configuration details and click submit.
+  6. Navigate back to to main Cad directory.
+  7. Should now see the login page. Login with the following details:
+    Username: admin@test.com
+    Password: cad2017!
+  8. If you can login please make sure that you delete the "Install" folder within your website directory!
 
 # Changing Department Icons
 In this version (0.0.1 released 10/06/19) you are now able to change the department icons. Within the folder /images/departmentIcons/ you can upload your own images. You are then able to change the file names in your "mdt.php" file. Lines: 75,78,81,84,87,83
