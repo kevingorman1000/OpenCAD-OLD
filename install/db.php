@@ -154,6 +154,6 @@ if(file_exists($configFile)){
 unset($_SESSION["installer"]);
 $_SESSION["installer"] == "config";
 
-header("Location:".BASE_URL."/install/index.php");
+header("Location: ../install/");
 $con->close();
 ?> 
