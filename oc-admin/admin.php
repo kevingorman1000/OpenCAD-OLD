@@ -1,4 +1,6 @@
 <?php
+          ini_set("allow_url_fopen", 1);
+
 
 /**
 
@@ -139,14 +141,34 @@ require_once(__DIR__ . '/../oc-functions.php');
           </div>
         </div>
         <!-- /top navigation -->
+        <!-- Added (12/09/19): Added Version checker-->
+        <?php
+          $jsondata = file_get_contents("http://kdog.ddns.net:8012/version.json");
+          $json = json_decode($jsondata, true);
 
-        <!-- page content -->
+          if($json['version'] == "0.0.2"){
+
+        echo' <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
                 <h3>CAD Administration</h3>
-              </div>
+              </div>';
+          }
+          else{
+            echo '
+            <div class="right_col" role="main">
+            <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3><a href="https://github.com/kevingorman1000/OpenCAD">There is an update pending. Click me to download from GitHub</a></h3>
+                <h3>CAD Administration</h3>
+
+              </div>';
+          }
+        ?>
+
 
               <?php /* HIUE SEARCH FUNCTION FOR NOW
               <div class="title_right">
