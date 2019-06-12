@@ -48,7 +48,7 @@ include("./actions/profileActions.php");
 
 <!DOCTYPE html>
 <html lang="en">
-	<?php include "./oc-includes/header.inc.php"; ?>
+  <?php include "./oc-includes/header.inc.php"; ?>
 
   <body class="nav-md">
     <div class="container body">
