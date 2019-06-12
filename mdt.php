@@ -888,6 +888,30 @@ This program comes with ABSOLUTELY NO WARRANTY; Use at your own risk.
           </div>
           <!-- ./ modal-body -->
           <div class="modal-footer">
+                <!-- Added: 10/06/19: Added if statements too allow redirects to function properly --> 
+                 <?php
+                    if((isset($_GET['dep']) && 'state' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'state' == $_SESSION['activeDepartment'])){
+                       $_SESSION['previous_location'] = 'mdtState';
+                    }
+                    elseif((isset($_GET['dep']) && 'sheriff' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'sheriff' == $_SESSION['activeDepartment'])){
+                       $_SESSION['previous_location'] = 'mdtSheriff';
+                    }
+                    elseif((isset($_GET['dep']) && 'highway' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'highway' == $_SESSION['activeDepartment'])){
+                      $_SESSION['previous_location'] = 'mdtHighway';
+                    }
+                    elseif((isset($_GET['dep']) && 'police' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'police' == $_SESSION['activeDepartment'])){
+                      $_SESSION['previous_location'] = 'mdtPolice';
+                    }
+                    elseif((isset($_GET['dep']) && 'fire' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'fire' == $_SESSION['activeDepartment'])){
+                      $_SESSION['previous_location'] = 'mdtFire';
+                    }
+                    elseif((isset($_GET['dep']) && 'ems' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'ems' == $_SESSION['activeDepartment'])){
+                      $_SESSION['previous_location'] = 'mdtEMS';
+                    }
+                    elseif((isset($_GET['dep']) && 'roadsideAssist' == $_GET['dep']) || (isset($_SESSION['activeDepartment']) && 'roadsideAssist' == $_SESSION['activeDepartment'])){
+                      $_SESSION['previous_location'] = 'mdtRoad';
+                   }
+                   ?>
                 <input name="create_citation" type="submit" class="btn btn-primary" value="Create" />
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </form>
