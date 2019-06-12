@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title>OpenCAD Installer</title>
-	<link rel="stylesheet" href="../css/installer.css">
+	<link rel="stylesheet" href="../css/opencad.css">
 </head>
 <body>
 	<?php 
@@ -30,7 +30,7 @@
 		<input type="text" placeholder="Community URL" name="baseUrl" required>
 		<input type="submit" value="Submit">
 		</form>';
-
+		
 
 	?>
 
