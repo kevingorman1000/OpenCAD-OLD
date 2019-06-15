@@ -1,6 +1,10 @@
 # OpenCAD
 Open Source Computer Aided Dispatch System for GTA V Roleplay Communities.
 
+Please note that development is on hold until the end of the weekend. I am away until Monday so unable to carry on. Updates will start to be pushed again within the week.
+
+Thank you for understanding
+
 # Translators wanted!
 Please visist for more information https://github.com/kevingorman1000/OpenCAD/wiki
 
