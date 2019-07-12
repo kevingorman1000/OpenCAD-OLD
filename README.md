@@ -1,3 +1,9 @@
+# Outdated
+
+I would reccomend grabbing the latest version from the Stormlight Tech fork as it patches a known security flaw in 0.2.6 and earlier.
+
+https://github.com/StormlightTech/OpenCAD-php/archive/0.3.0-H
+
 # OpenCAD
 Open Source Computer Aided Dispatch System for GTA V Roleplay Communities.
 
