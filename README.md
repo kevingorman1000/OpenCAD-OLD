@@ -12,7 +12,7 @@ Please note that development is on hold until the end of the weekend. I am away 
 Thank you for understanding
 
 # Translators wanted!
-Please visist for more information https://github.com/kevingorman1000/OpenCAD/wiki
+Please visit https://github.com/kevingorman1000/OpenCAD/wiki for more information
 
 ## Installation Requirements
 * Operating System: Linux or Windows
